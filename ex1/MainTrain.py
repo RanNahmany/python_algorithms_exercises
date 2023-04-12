@@ -7,6 +7,20 @@ b = Num(random.randint(-100,100))
 c = Num(random.randint(-100,100))
 d = Num(random.randint(-100,100))
 
+# print (a.num,b.num,c.num,d.num)
+
+# a = Num(41)
+# b = Num(41)
+# c = Num(90)
+# d = Num(-50)
+
+
+# a = Num(15)
+# b = Num(7)
+# c = Num(-16)
+# d = Num(27)
+
+
 if Plus(a,b).calc() != a.calc()+b.calc():
     print("problem with Plus (-10)")
 
@@ -36,15 +50,29 @@ sc = strf(c.calc())
 sd = strf(d.calc())
 
 s = sa+'+'+sb+'*('+sc+'-'+sd+')'
+# print (s)
+# print (ShuntingYardAlgorithm(s))
+# print (f"need to calculate:\n{eval(s)}")
+# print (f"Actually calculates:\n{parser(s)}")
+if parser(s) != eval(s) :
+    print("problem with parser (-20)")
 if parser(s) != eval(s) :
     print("problem with parser (-10)")
 
 
 s = sa+'*'+sa+'+'+sb+'*('+sc+'-'+sd+'+'+sb+')'
+# print (s)
+# print (ShuntingYardAlgorithm(s))
+# print (f"need to calculate:\n{eval(s)}")
+# print (f"Actually calculates:\n{parser(s)}")
 if parser(s) != eval(s) :
     print("problem with parser (-20)")
 
 s = sa+'*('+sa+'+'+sb+'*('+sc+'-'+sd+'+'+sb+'))'
+# print (s)
+# print (ShuntingYardAlgorithm(s))
+# print (f"need to calculate:\n{eval(s)}")
+# print (f"Actually calculates:\n{parser(s)}")
 if parser(s) != eval(s) :
     print("problem with parser (-20)")
 
